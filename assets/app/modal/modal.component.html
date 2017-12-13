@@ -1,0 +1,35 @@
+<div class="modal-option appt-modal" [ngClass]="setClass()" (click)="modalClick()">
+
+    <div class="time-show">
+        {{showTime}}
+    </div>
+
+    <div class="available">
+        <p>AVAILABLE TIME</p>
+        <ul class="times">
+            <div *ngFor="let time of availableTime; let i = index;">
+                <li (click)="onClickTime(time, i)" [class._active]="i == _activeTime">
+                    {{time}}
+                </li>
+            </div>
+        </ul>
+        <p>BARBERS</p>
+        <ul class="barbers">
+            <div *ngFor="let barber of barbers; let i = index;">
+                <li (click)="onClickBarber(barber, i)" [class._active]="i == _activeBarber">
+                    {{barber}}
+                </li>
+            </div>
+        </ul>
+        <div class="btn submit-btn" (click)="onSubmit()">Submit</div>
+    </div>
+
+    <!--<form [formGroup]="myForm" (ngSubmit)="onSubmit()">-->
+        <!--<select class="form-control" id="barber" formControlName="barber">-->
+            <!--<option *ngFor="let barber of barbers" [value]="barber">{{barber}}</option>-->
+        <!--</select>-->
+
+        <!--<button class="btn btn-primary" type="submit">Submit</button>-->
+    <!--</form>-->
+
+</div>

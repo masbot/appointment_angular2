@@ -1,0 +1,26 @@
+
+<div class="row">
+    <div class="user" style="height:350px;border:1px solid #3F51B5;position: relative;background-color: #303F9F;">
+        <ul class="sign-option" *ngIf="isLoggedIn()">
+            <li class="" (click)="onLogout()" *ngIf="isLoggedIn()">logout</li>
+        </ul>
+
+        <ul class="sign" [ngClass]="{'_current': !isFadeSign}" *ngIf="!isLoggedIn()">
+            <li (click)="signin()" [ngClass]="{'_active': isSignIn}">Sign In</li>
+            <li (click)="signup()" [ngClass]="{'_active': !isSignIn}">Sign Up</li>
+            <li routerLinkActive="hide"><a style="color:#fff;" [routerLink]="['about']">About</a></li>
+            <li routerLinkActive="hide"><a style="color:#fff;" [routerLink]="['calendar']">Calendar</a></li>
+        </ul>
+
+        <app-signup *ngIf="!isLoggedIn()" [isSignIn]="isSignIn"></app-signup>
+
+        <app-signin *ngIf="!isLoggedIn()" [isSignIn]="isSignIn" (userSignIn)="userSignIn($event)"></app-signin>
+
+        <div *ngIf="isLoggedIn()">
+            <h3>My Appointment</h3>
+            <ul>
+                <li *ngFor="let ap of myAppt">{{ap}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

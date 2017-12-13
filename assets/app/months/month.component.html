@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12"
+         style="background-color: #C5CAE9;height:60px;border:1px solid #C5CAE9;">
+        <h3 style="display:inline-block;color:#212121;">{{dateData.monthName}}</h3>
+        <button style="float:right;margin:20px 0px 10px;" class="btn next-btn" (click)="next()">Next Month</button>
+    </div>
+</div>
+
+<div class="row">
+    <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tues</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+    </ul>
+
+    <app-days [dateData]="dateData"></app-days>
+
+</div>

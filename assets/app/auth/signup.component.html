@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="fade" [ngClass]="{'in': isFadeSign, '_current': isFadeSign}">
+    <label for="Email">EMAIL</label>
+    <input class="form-control" type="text" id="email" formControlName="email">
+    <label for="password">PASSWORD</label>
+    <input class="form-control" type="text" id="password" formControlName="password">
+    <label for="confirm">CONFIRM</label>
+    <input class="form-control" type="text" id="confirm" formControlName="confirm">
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>

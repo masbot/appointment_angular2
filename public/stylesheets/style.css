@@ -1,0 +1,240 @@
+/*body {*/
+  /*padding: 50px;*/
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+/*}*/
+
+/*a {*/
+  /*color: #00B7FF;*/
+  /*cursor: pointer;*/
+/*}*/
+
+/*a:hover,*/
+/*a:active {*/
+  /*color: #00B7FF;*/
+  /*text-decoration: underline;*/
+/*}*/
+
+/*a.danger {*/
+  /*color: red;*/
+/*}*/
+
+/*.spacing {*/
+  /*margin-bottom: 20px;*/
+/*}*/
+
+/*input.ng-invalid.ng-touched {*/
+  /*border: 1px solid red;*/
+/*}*/
+.container{
+  position:relative;
+}
+
+ul{
+  padding:0;
+  margin:0;
+  list-style-type: none;
+}
+
+li{
+  display:inline-block;
+  width:14.285%;
+  border-left: 1px solid #BDBDBD;
+  border-bottom: 1px solid #BDBDBD;
+  float: left;
+  text-align: right;
+}
+
+li:nth-child(7n), app-day:nth-child(7n) li, app-day:last-child li{
+  border-right:1px solid #BDBDBD;
+}
+
+.next-btn{
+    color: #fff;
+    background-color: #536DFE;
+    border: none;
+    font-size: 10px;
+    padding: 6px 12px;
+}
+
+.next-btn:hover,.next-btn:focus{
+    opacity: 0.8;
+    background-color: #536DFE;
+    color:#fff;
+}
+
+.weekdays li{
+    border-top: 1px solid #BDBDBD;
+}
+
+.dates li{
+    height:100px;
+    color: #212121;
+}
+
+.dates li:hover{
+  -webkit-box-shadow: 0px 13px 44px 1px rgba(158,155,158,1);
+  -moz-box-shadow: 0px 13px 44px 1px rgba(158,155,158,1);
+  box-shadow: 0px 13px 44px 1px rgba(158,155,158,1);
+}
+
+.time-show{
+    margin: 0 auto 15px;
+    text-align: center;
+    width: 190px;
+    padding: 7px 10px;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.times{
+    height:150px;
+}
+
+.barbers{
+    height:75px;
+}
+
+.times li, .barbers li{
+    width: 20%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 8px 5px;
+    background: #fff;
+    color: #757575;
+    border-radius: 16px;
+    border: 1px solid #3F51B5;
+}
+
+.times li._active, .barbers li._active{
+    background-color: #448AFF !important;
+    color: #fff;
+    border: 1px solid #448AFF;
+}
+
+.available p{
+    color: #757575;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.modal-option{
+    position: relative;
+    width: 600px;
+    height: 420px;
+    margin: 30px auto;
+}
+
+app-modal.in{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+}
+
+.modal.fade .modal-option {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.modal.in .modal-option {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.appt-modal .submit-btn{
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: #448AFF;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.sign li{
+    border: none;
+    width: 75px;
+    text-align: center;
+    padding-bottom:2px;
+    color: white;
+}
+
+.sign li:nth-child(2){
+    margin-left:5px;
+}
+
+.sign li._active{
+    border-bottom: 1px solid #536DFE;
+}
+
+.sign li:hover{
+    color: #C5CAE9;
+}
+
+.sign{
+    position: absolute;
+    left: 5%;
+    margin: 25px 0px;
+}
+
+.user form label{
+    color: #BDBDBD;
+    font-size: 9px;
+    opacity: 0.6;
+}
+
+.user form input{
+    border-radius: 16px;
+    height: 30px;
+    background: #3F51B5;
+    margin-bottom: 5px;
+    border: none;
+    color:#FFFFFF;
+    font-size: 12px;
+}
+
+.user form .btn{
+    background: #536DFE;
+    width: 100%;
+    border-radius: 16px;
+    height: 30px;
+    font-size: 12px;
+    margin-top: 40px;
+    color:#fff;
+}
+
+form{
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 65px;
+}
+
+._current{
+    z-index: 99 !important;
+}
+
+.sign-option{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+    min-width: 110px;
+}
+
+.sign-option li{
+    width:100%;
+}
