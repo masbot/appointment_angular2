@@ -11,8 +11,7 @@ var appointmentRoutes = require('./routes/appointments');
 var userRoutes = require('./routes/user');
 
 var app = express();
-mongoose.connect('syoo:masbot@ds153709.mlab.com:53709/angular2-appointment');
-// mongoose.connect('localhost:27017/a1');
+mongoose.connect('localhost:27017/a1');
 
 // view engine setupclea
 app.set('views', path.join(__dirname, 'views'));
